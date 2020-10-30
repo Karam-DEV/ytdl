@@ -48,6 +48,11 @@ class BaseVideo:
 			self._fetch_basic()
 		return self._title
 	@property
+	def author(self):
+		if not self._have_basic:
+			self._fetch_basic()
+		return self._author
+	@property
 	def likes(self):
 		if not self._have_basic:
 			self._fetch_basic()
