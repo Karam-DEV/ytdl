@@ -14,7 +14,10 @@ setuptools.setup(
     author_email="krmhmade1@gmail.com",
     description="Youtube videos data extractor",
     long_description=LONG_DESCRIPTION,
-    packages=['ytdl'],
+    packages=[
+    	'ytdl',
+    	'ytdl.backend',
+    	],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
