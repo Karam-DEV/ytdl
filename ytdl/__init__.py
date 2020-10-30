@@ -1,1 +1,1 @@
-from .backend.ytdl import Video
+from .backend import Video

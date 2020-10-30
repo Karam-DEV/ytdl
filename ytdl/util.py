@@ -2,6 +2,8 @@ from __future__ import unicode_literals
 import re
 from urllib.parse import parse_qs, urlparse
 import requests as req
+
+
 def extract_video_id(url:str):
 	idregx = re.compile(r'[\w-]{11}$')
 	url = url.strip()
@@ -23,4 +25,4 @@ def extract_video_id(url:str):
 	raise ValueError(err)
 
 def get_stream_size(url):
-	return req.get(url, stream=True).headers['Content-length']
+	return int(req.get(url, stream=True).headers['Content-length'])
